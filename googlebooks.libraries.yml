@@ -1,0 +1,7 @@
+googlebooks.previewjs:
+  header: true
+  js:
+    '//books.google.com/books/previewlib.js' : {type: external, attributes: { defer: true, async: true} }
+  #dependencies:
+  # - core/jquery
+  #    - core/drupalSettings

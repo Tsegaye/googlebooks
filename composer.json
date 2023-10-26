@@ -1,0 +1,14 @@
+{
+  "name": "drupal/googlebooks",
+  "type": "drupal-module",
+  "description": "Google Books API",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/googlebooks",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/googlebooks",
+    "source": "http://cgit.drupalcode.org/googlebooks"
+  },
+  "require": { }
+}

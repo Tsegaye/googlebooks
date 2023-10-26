@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains googlebooks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function googlebooks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the googlebooks module.
+    case 'help.page.googlebooks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Google Books API') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function googlebooks_theme($existing, $type, $theme, $path) {
+  return [
+    'googlebooks_template' => [
+      'variables' => [
+        'books' => NULL,
+        'form' => 'form'
+      ],
+    ],
+  ];
+}
+

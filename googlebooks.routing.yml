@@ -1,0 +1,13 @@
+googlebooks.settings:
+  path: '/admin/config/googlebooks-api'
+  defaults:
+    _form: '\Drupal\googlebooks\Form\ConfigForm'
+    _title: 'Google Books API Settings'
+  requirements:
+    _permission: 'administer googlebooks api'
+googlebooks.search:
+  path: '/googlebooks/search'
+  defaults:
+    _form: '\Drupal\googlebooks\Form\GoogleBooksSearchForm'
+  requirements:
+      _permission: 'access content'

@@ -1,0 +1,6 @@
+googlebooks.settings:
+  title: 'Google Books API Settings'
+  description: 'Google Books API settings'
+  parent: system.admin_config_services
+  route_name: googlebooks.settings
+  weight: 100

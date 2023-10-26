@@ -1,0 +1,7 @@
+name: 'googlebooks'
+type: module
+description: 'Google Books API'
+core: 8.x
+package: 'Custom'
+dependencies:
+- key:key

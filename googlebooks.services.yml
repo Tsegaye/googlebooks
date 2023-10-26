@@ -1,0 +1,4 @@
+services:
+  googlebooks.client:
+    class: '\Drupal\googlebooks\Client\GoogleBooksClient'
+    arguments: ['@http_client', '@key.repository', '@config.factory']

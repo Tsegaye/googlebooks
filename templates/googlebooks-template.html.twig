@@ -1,0 +1,43 @@
+{{ attach_library('googlebooks/googlebooks.previewjs') }}
+<script>GBS_setLanguage('en');</script>
+{{ form }}
+{% for book in books %}
+<div class="row form-group" id = "booksearchresult">
+    <div class="col-md-8">
+        {% if book.thumbnail is not empty %}
+            <div class="" style="float:left;padding-right:10px;">
+                <img src="{{ book.thumbnail }}"/>
+            </div>
+        {% endif %}
+        <p><strong>Book title:</strong> {{ book.title }}</p>
+        <p> Author(s):
+            {% for author in book.authors %}
+                {{ author }}
+                {% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </p>
+        {% if book.publishedDate is not empty %}
+            <p><strong>Published Date:</strong> {{ book.publishedDate }}</p>
+        {% endif %}
+        {% if book.publisher is not empty %}
+            <p><strong>Publisher:</strong> {{ book.publisher }}</p>
+        {% endif %}
+        {% if book.isbn is not empty %}
+            <p><strong>Search Inside:</strong> <script>GBS_insertPreviewButtonPopup('ISBN:{{ book.isbn }}');</script></p>
+        {% endif %}
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-success">
+            <div class="panel-body">
+                <strong>Price:</strong>
+            </div>
+            <div class="panel-footer">{{ book.price }}</div>
+        </div>
+    </div>
+    {% if book.description is not empty %}
+        <p style="clear: both;padding-top: 20px;">{{ book.description }}</p>
+    {% endif %}
+</div>
+
+{% endfor %}
+
